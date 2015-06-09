@@ -84,7 +84,7 @@ define([
             // Do not initialize volume sliders on mobile.
             if(!utils.isMobile()){
                 muteButton = button('jw-icon-volume', this._api.setMute);
-                volumeSlider = new Slider('jw-slider-volume', 'horizontal');
+                volumeSlider = new Slider('volume', 'horizontal');
                 volumeTooltip = new VolumeTooltip(this._model, 'jw-icon-volume');
             }
 

@@ -105,9 +105,7 @@
         }
     }
 
-    .jw-rail,
-    .jw-buffer,
-    .jw-progress {
+    .jw-slider-element {
         border-radius: 0.5em;
     }
 
@@ -125,69 +123,63 @@
         box-shadow: @rail-glow;
     }
 
-    .jw-slider-horizontal,
-    .jw-slider-vertical {
-
-        .jw-thumb:after {
-            width: @thumb-size;
-            height: @thumb-size;
-            border-radius: 1em;
-            background: @thumb-color;
-            box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
-        }
+    .jw-knob:after {
+        width: @thumb-size;
+        height: @thumb-size;
+        border-radius: 1em;
+        background: @thumb-color;
+        box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
     }
 
-    .jw-slider-horizontal {
-        .jw-rail-group {
+    .jw-timeline {
+        &-container {
             height: 1.2em;
         }
 
-        .jw-rail,
-        .jw-buffer,
-        .jw-progress {
+        &-element {
             height: @rail-height;
         }
 
-        .jw-thumb {
+        &-knob {
             .vertically-centered-rail-element(@rail-height, @thumb-size);
         }
 
 
-        .jw-progress {
+        &-progress {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0.5em;
             border-top-left-radius: 0.5em;
         }
 
-        .jw-progress,
-        .jw-buffer {
+        &-progress,
+        &-buffer {
             border: @def-border;
             border-style: solid none #000;
         }
+    }
 
+    .jw-cue {
+        .vertically-centered-rail-element(@rail-height, @cue-size);
 
-        .jw-cue {
-            .vertically-centered-rail-element(@rail-height, @cue-size);
+        &:after {
+            width: @cue-size;
+            height: @cue-size;
+            background-color: #616164;
+            border-radius: 50%;
+            box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75);
 
-            &:after {
-                width: @cue-size;
-                height: @cue-size;
-                background-color: #616164;
-                border-radius: 50%;
-                box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.75);
-
-            }
         }
     }
 
-    .jw-slider-vertical {
-        .jw-rail,
-        .jw-progress {
+
+    .jw-volume {
+        &-rail,
+        &-progress {
             width: @rail-height;
         }
 
-        .jw-progress {
+        &-progress {
             background: linear-gradient(to right, rgba(255, 255, 255, 1) 0, rgba(204, 204, 204, 1) 50%, rgba(255, 255, 255, 1) 100%);
             border-top-right-radius: 0;
             border-bottom-right-radius: 0.5em;

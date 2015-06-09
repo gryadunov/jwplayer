@@ -89,13 +89,13 @@
     .jw-slider-horizontal,
     .jw-slider-vertical {
 
-        .jw-rail,
-        .jw-progress,
-        .jw-buffer {
+        .jw-timeline-rail,
+        .jw-timeline-progress,
+        .jw-timeline-buffer {
             border-radius: @ui-corner-round;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
 
             &:after {
                 background-color: #fff;
@@ -108,9 +108,7 @@
 
     .jw-slider-horizontal {
 
-        .jw-rail,
-        .jw-progress,
-        .jw-buffer {
+        .jw-timeline-element {
             height: @rail-height;
         }
 
@@ -125,23 +123,23 @@
             }
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .vertically-centered-rail-element(@rail-height, .7em);
         }
     }
 
     .jw-slider-vertical {
         
-        .jw-rail,
-        .jw-progress {
+        .jw-timeline-rail,
+        .jw-timeline-progress {
             width: @rail-height;
         }
 
-        .jw-rail {
+        .jw-timeline-rail {
             background: @rail-vert-gradient;
         }
 
-        .jw-progress {
+        .jw-timeline-progress {
             background: @progress-vert-gradient;
         }
 

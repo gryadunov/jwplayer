@@ -114,46 +114,71 @@
         }
     }
 
-    .jw-rail {
-        background-color: #384154;
-        box-shadow: none;
-    }
+// <<<<<<< Updated upstream
+//     .jw-rail {
+//         background-color: #384154;
+//         box-shadow: none;
+//     }
 
-    .jw-buffer {
-        background-color: #666F82;
-    }
+//     .jw-buffer {
+//         background-color: #666F82;
+//     }
 
-    .jw-progress {
-        background: @active-color;
-    }
+//     .jw-progress {
+//         background: @active-color;
+//     }
 
-    .jw-thumb {
-        width: .6em;
+//     .jw-thumb {
+//         width: .6em;
 
-        &:after {
-            background-color: #fff;
-            box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
-            width: .6em;
-            height: .6em;
-            border-radius: 1em;
+//         &:after {
+//             background-color: #fff;
+//             box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+//             width: .6em;
+//             height: .6em;
+//             border-radius: 1em;
+// =======
+    .jw-slider-horizontal,
+    .jw-slider-vertical {
+
+        .jw-timeline-rail {
+            background-color: #384154;
+            box-shadow: none;
+        }
+
+        .jw-timeline-buffer {
+            background-color: #666F82;
+        }
+
+        .jw-timeline-progress {
+            background: @active-color;
+        }
+
+        .jw-timeline-knob {
+            &:after {
+                background-color: #fff;
+                box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+                width: .6em;
+                height: .6em;
+                border-radius: 1em;
+            }
+//>>>>>>> Stashed changes
         }
     }
 
 
     .jw-slider-horizontal {
 
-        .jw-rail-group {
+        .jw-timeline-container {
             height: 0.95em;
         }
 
-        .jw-rail,
-        .jw-buffer,
-        .jw-progress {
+        .jw-timeline-element {
             height: .2em;
             border-radius: 0;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .vertically-centered-rail-element(.2em, .6em);
         }
 
@@ -170,11 +195,20 @@
     }
 
     .jw-slider-vertical {
-        .jw-rail,
-        .jw-buffer,
-        .jw-progress {
+        .jw-timeline-element {
             width: .2em;
         }
+// <<<<<<< Updated upstream
+// =======
+
+        .jw-timeline-knob {
+            .horizontally-centered-thumb(.2em, .6em);
+        }
+    }
+
+    .jw-timeline-knob {
+        .horizontally-centered-thumb();
+//>>>>>>> Stashed changes
     }
 
     .jw-volume-tip {

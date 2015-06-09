@@ -97,8 +97,8 @@
         }
 
         .jw-rail,
-        .jw-buffer,
-        .jw-progress {
+        .jw-timeline-buffer,
+        .jw-timeline-progress {
             height: @rail-height;
             border-radius: 0;
         }
@@ -107,7 +107,7 @@
             box-shadow: none;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .vertically-centered-rail-element(@rail-height, @thumb-size);
             margin: 0;
 
@@ -134,11 +134,11 @@
 
     .jw-slider-vertical {
         .jw-rail,
-        .jw-progress {
+        .jw-timeline-progress {
             width: @rail-height;
         }
 
-        .jw-progress {
+        .jw-timeline-progress {
             background: #fff;
         }
 
@@ -146,7 +146,7 @@
             background: #737373;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             margin-bottom: 2px/-2;
 
             &:after {

@@ -121,29 +121,27 @@
         background-color: #282828;
     }
 
-    .jw-rail,
-    .jw-progress,
-    .jw-buffer {
+    .jw-timeline-element {
         border-radius: @ui-corner-round;
         border: 1px solid #000;
     }
 
-    .jw-rail {
+    .jw-timeline-rail {
         background-color: #353535;
     }
 
-    .jw-progress {
+    .jw-timeline-progress {
         background-color: #c93835;
     }
 
-    .jw-buffer {
+    .jw-timeline-buffer {
         background-color: #7d7d7d;
         box-shadow: inset 0 -2px 4px -1px rgba(255,255,255,0.5);
     }
 
     .jw-slider-horizontal,
     .jw-slider-vertical {
-        .jw-thumb {
+        .jw-timeline-knob {
 
             &:after {
                 background-color: #bbb5b7;
@@ -155,14 +153,12 @@
     }
 
     .jw-slider-horizontal {
-        .jw-rail-group {
+        .jw-timeline-container {
             .vertically-centered-rail-element(@rail-height, 2em);
             height: .4em;
         }
 
-        .jw-rail,
-        .jw-progress,
-        .jw-buffer {
+        .jw-timeline-element {
             height: @rail-height;
         }
 
@@ -177,7 +173,7 @@
             }
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .vertically-centered-rail-element(@rail-height, .8em);
 
             &:after {

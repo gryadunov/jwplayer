@@ -1,7 +1,7 @@
 @import "vars";
 
 
-.jw-rail-group {
+.jw-slider-container {
     display : inline-block;
     height: 1em;
     position: relative;
@@ -48,26 +48,24 @@
     &.jw-slider-volume {
         margin-right: 5px;
     }
+}
 
-    .jw-rail,
-    .jw-buffer,
-    .jw-progress {
+.jw-timeline {
+    &-container,
+    &-element {
         width: 100%;
+    }
+
+    &-element {
         height: .4em;
     }
 
-    .jw-progress,
-    .jw-buffer {
+    &-progress,
+    &-buffer {
         width: 0;   // Default width, overridden by player.
     }
 
-    .jw-rail,
-    .jw-progress,
-    .jw-rail-group {
-        width: 100%;
-    }
-
-    .jw-thumb {
+    &-thumb {
         left: 0;    // Default position, overridden by player.
         margin-left: @thumb-size/-2;
         &:after {
@@ -77,7 +75,7 @@
         }
     }
 
-    .jw-cue {
+    &-cue {
         &:after {
             background-color: #fff;
             width: .1em;
@@ -86,28 +84,28 @@
     }
 }
 
-.jw-slider-vertical {
+.jw-volume {
     width: @def-rail-width;
     height: @volume-rail-length;
     bottom: 0em;
     position: absolute;
     padding: 1em;
 
-    .jw-rail,
-    .jw-buffer,
-    .jw-progress {
+    &-rail,
+    &-buffer,
+    &-progress {
         bottom: 0;
         height: 100%;
     }
 
-    .jw-progress,
-    .jw-buffer {
+    &-progress,
+    &-buffer {
         height: 0;   // Default height, overridden by player.
     }
 
-    .jw-rail-group,
-    .jw-rail,
-    .jw-progress {
+    &-container,
+    &-rail,
+    &-progress {
         bottom: 0;
         width: @def-rail-width;
         height: 100%;
@@ -116,12 +114,12 @@
         margin: 0 auto;
     }
 
-    .jw-rail-group {
+    &-timeline-container {
         height: 4em;
         position: relative;
     }
 
-    .jw-thumb {
+    &-thumb {
         bottom: 0;  // Default position, overridden by player.
         left: 0;
         right: 0;

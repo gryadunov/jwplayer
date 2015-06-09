@@ -89,36 +89,36 @@
         background-color: @rail-color;
     }
 
-    .jw-rail-group {
+    .jw-timeline-container {
         height: 1em;
     }
 
     .jw-rail,
-    .jw-buffer,
-    .jw-progress,
-    .jw-thumb:after {
+    .jw-timeline-buffer,
+    .jw-timeline-progress,
+    .jw-timeline-knob:after {
         box-sizing: border-box;
         border: 1.5px solid #000;
         border-radius: 2px;
     }
 
-    .jw-progress,
-    .jw-thumb {
+    .jw-timeline-progress,
+    .jw-timeline-knob {
         background: @rail-color;
     }
 
     .jw-slider-horizontal {
         .jw-rail,
-        .jw-buffer,
-        .jw-progress {
+        .jw-timeline-buffer,
+        .jw-timeline-progress {
             height: @rail-height;
         }
 
-        .jw-progress {
+        .jw-timeline-progress {
             background: @horiz-rail-gradient;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .vertically-centered-rail-element(.3em,.5em);
 
             &:after {
@@ -142,15 +142,15 @@
 
     .jw-slider-vertical {
         .jw-rail,
-        .jw-progress {
+        .jw-timeline-progress {
             width: @rail-height;
         }
 
-        .jw-progress {
+        .jw-timeline-progress {
             background: @vertical-rail-gradient;
         }
 
-        .jw-thumb {
+        .jw-timeline-knob {
             .horizontally-centered-thumb(@rail-height,.5em);
 
             &:after {

@@ -10,7 +10,7 @@ define([
 
             Tooltip.call(this, name);
 
-            this.volumeSlider = new Slider('jw-slider-volume jw-volume-tip', 'vertical');
+            this.volumeSlider = new Slider('volume', 'vertical');
             this.addContent(this.volumeSlider.element());
 
             this.volumeSlider.on('update', function (evt) {
@@ -22,7 +22,7 @@ define([
             new UI(this.el).on('click', this.toggleValue.bind(this)).on('tap', this.toggleOpenState.bind(this));
             this.el.addEventListener('mouseover', this.openTooltip.bind(this));
             this.el.addEventListener('mouseout', this.closeTooltip.bind(this));
-
+            utils.addClass(this.el, 'jw-volume-tip');
             this._model.on('change:volume', this.onVolume, this);
         },
         toggleValue : function(evt){
