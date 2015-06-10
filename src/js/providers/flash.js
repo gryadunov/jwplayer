@@ -123,21 +123,21 @@ define([
                     }
 
                     // place div on top of swf to capture clicks
-                    if (!_clickOverlay) {
-                        _clickOverlay = document.createElement('div');
-                        _clickOverlay.style.background = 'transparent';
-                        _clickOverlay.style.position = 'absolute';
-                        _clickOverlay.style.left = 0;
-                        _clickOverlay.style.right = 0;
-                        _clickOverlay.style.top = 0;
-                        _clickOverlay.style.bottom = 0;
-                        var interactCallback = function() {
-                            _eventDispatcher.sendEvent(events.JWPLAYER_PROVIDER_CLICK);
-                        };
-
-                        _clickOverlayUI = new UI(_clickOverlay).on('click tap', interactCallback);
-                    }
-                    _container.appendChild(_clickOverlay);
+//                    if (!_clickOverlay) {
+//                        _clickOverlay = document.createElement('div');
+//                        _clickOverlay.style.background = 'transparent';
+//                        _clickOverlay.style.position = 'absolute';
+//                        _clickOverlay.style.left = 0;
+//                        _clickOverlay.style.right = 0;
+//                        _clickOverlay.style.top = 0;
+//                        _clickOverlay.style.bottom = 0;
+//                        var interactCallback = function() {
+//                            _eventDispatcher.sendEvent(events.JWPLAYER_PROVIDER_CLICK);
+//                        };
+//
+//                        _clickOverlayUI = new UI(_clickOverlay).on('click tap', interactCallback);
+//                    }
+//                    _container.appendChild(_clickOverlay);
 
                     // listen to events triggered from flash
 

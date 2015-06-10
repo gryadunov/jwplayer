@@ -16,6 +16,7 @@ import flash.display.StageDisplayState;
 import flash.display.StageScaleMode;
 import flash.events.ErrorEvent;
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.geom.Rectangle;
 
 public class View extends Sprite {
@@ -36,6 +37,7 @@ public class View extends Sprite {
     protected var _instreamPlugin:IPlugin;
 
     public function View(model:Model) {
+        trace("init view");
         _model = model;
         _model.addEventListener(MediaEvent.JWPLAYER_MEDIA_LOADED, mediaLoaded);
 
@@ -47,6 +49,10 @@ public class View extends Sprite {
         );
 
         setupLayers();
+
+        addEventListener(MouseEvent.CLICK, function(evt:MouseEvent):void {
+            trace("HI MOOUUSE!!!!!!!!!! view", evt);
+        });
     }
 
     public function setupView():void {

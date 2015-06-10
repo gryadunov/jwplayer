@@ -12,6 +12,7 @@ import com.longtailvideo.jwplayer.view.View;
 import flash.display.Sprite;
 import flash.events.ErrorEvent;
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.geom.Rectangle;
 import flash.system.Security;
 
@@ -27,13 +28,13 @@ public class Player extends Sprite implements IPlayer {
     public function Player() {
         Security.allowDomain("*");
 
+        trace("Player Start");
+
         RootReference.init(this);
         this.addEventListener(Event.ADDED_TO_STAGE, stageReady);
         this.tabEnabled = false;
         this.tabChildren = false;
         this.focusRect = false;
-        this.mouseEnabled = false;
-        this.mouseChildren = false;
 
         _model = newModel(new PlayerConfig(this.soundTransform));
 
@@ -44,12 +45,19 @@ public class Player extends Sprite implements IPlayer {
         _controller.addEventListener(PlayerEvent.JWPLAYER_SETUP_ERROR, setupError, false, -1);
 
         _controller.setupPlayer();
+
+        addEventListener(MouseEvent.CLICK, function(evt:MouseEvent):void {
+            trace("HI MOOUUSE!!!!!!!!!!", evt);
+        });
     }
 
     private function stageReady(e:Event):void {
         this.removeEventListener(Event.ADDED_TO_STAGE, stageReady);
         RootReference.init(this);
         _view.setupView();
+        addEventListener(MouseEvent.CLICK, function(evt:MouseEvent):void {
+            trace("HI MOOUUSE!!!!!!!!!! stage", evt);
+        });
     }
 
     public function get version():String {

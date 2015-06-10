@@ -10,11 +10,17 @@ import com.longtailvideo.jwplayer.utils.Stretcher;
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
+import flash.events.MouseEvent;
 
 public class MediaProvider extends Sprite implements IMediaProvider {
     public function MediaProvider(provider:String) {
         _provider = provider;
         _dispatcher = new GlobalEventDispatcher();
+
+        trace('media provider');
+        addEventListener(MouseEvent.CLICK, function(evt:MouseEvent):void {
+            trace("HI MOOUUSE!!!!!!!!!! media", evt);
+        });
     }
     /** Most recent buffer data **/
     protected var _bufferPercent:Number;
