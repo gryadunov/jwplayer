@@ -89,13 +89,13 @@
     .jw-slider-horizontal,
     .jw-slider-vertical {
 
-        .jw-timeline-rail,
-        .jw-timeline-progress,
-        .jw-timeline-buffer {
+        .jw-rail,
+        .jw-progress,
+        .jw-buffer {
             border-radius: @ui-corner-round;
         }
 
-        .jw-timeline-knob {
+        .jw-knob {
 
             &:after {
                 background-color: #fff;
@@ -108,7 +108,9 @@
 
     .jw-slider-horizontal {
 
-        .jw-timeline-element {
+        .jw-rail,
+        .jw-progress,
+        .jw-buffer {
             height: @rail-height;
         }
 
@@ -123,23 +125,23 @@
             }
         }
 
-        .jw-timeline-knob {
+        .jw-knob {
             .vertically-centered-rail-element(@rail-height, .7em);
         }
     }
 
     .jw-slider-vertical {
         
-        .jw-timeline-rail,
-        .jw-timeline-progress {
+        .jw-rail,
+        .jw-progress {
             width: @rail-height;
         }
 
-        .jw-timeline-rail {
+        .jw-rail {
             background: @rail-vert-gradient;
         }
 
-        .jw-timeline-progress {
+        .jw-progress {
             background: @progress-vert-gradient;
         }
 
@@ -149,17 +151,5 @@
     .jw-volume-tip,
     .jw-menu {
         border-radius: @volume-border-radius;
-    }
-
-    .jw-icon-cc {
-        color: @cc-active;
-
-        &.jw-off {
-            color: @cc-inactive;   
-
-            &:before {
-                content: "\e605";
-            }        
-        }
     }
 }

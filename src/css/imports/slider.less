@@ -26,9 +26,8 @@
 }
 
 .jw-cue,
-.jw-thumb {
+.jw-knob {
     position: absolute;
-    z-index: 1;
     cursor: pointer;
 
     &:after {
@@ -38,7 +37,19 @@
 }
 
 .jw-cue {
-    z-index: 0;
+    &:after {
+        background-color: #fff;
+        width: .1em;
+        height: .4em;
+    }
+}
+
+.jw-knob {
+    &:after {
+        background-color: #aaa;
+        width: .4em;
+        height: .4em;
+    }
 }
 
 .jw-slider-horizontal {
@@ -48,64 +59,53 @@
     &.jw-slider-volume {
         margin-right: 5px;
     }
-}
 
-.jw-timeline {
-    &-container,
-    &-element {
+    .jw-rail,
+    .jw-buffer,
+    .jw-progress {
         width: 100%;
-    }
-
-    &-element {
         height: .4em;
     }
 
-    &-progress,
-    &-buffer {
+    .jw-progress,
+    .jw-buffer {
         width: 0;   // Default width, overridden by player.
     }
 
-    &-thumb {
-        left: 0;    // Default position, overridden by player.
-        margin-left: @thumb-size/-2;
-        &:after {
-            background: #aaa;
-            width: .4em;
-            height: .4em;
-        }
+    .jw-rail,
+    .jw-progress,
+    .jw-slider-container {
+        width: 100%;
     }
 
-    &-cue {
-        &:after {
-            background-color: #fff;
-            width: .1em;
-            height: .4em;
-        }
+    .jw-knob {
+        left: 0;    // Default position, overridden by player.
+        margin-left: @thumb-size/-2;
     }
 }
 
-.jw-volume {
+.jw-slider-vertical {
     width: @def-rail-width;
     height: @volume-rail-length;
     bottom: 0em;
     position: absolute;
     padding: 1em;
 
-    &-rail,
-    &-buffer,
-    &-progress {
+    .jw-rail,
+    .jw-buffer,
+    .jw-progress {
         bottom: 0;
         height: 100%;
     }
 
-    &-progress,
-    &-buffer {
+    .jw-progress,
+    .jw-buffer {
         height: 0;   // Default height, overridden by player.
     }
 
-    &-container,
-    &-rail,
-    &-progress {
+    .jw-slider-container,
+    .jw-rail,
+    .jw-progress {
         bottom: 0;
         width: @def-rail-width;
         height: 100%;
@@ -114,17 +114,16 @@
         margin: 0 auto;
     }
 
-    &-timeline-container {
+    .jw-slider-container {
         height: 4em;
         position: relative;
     }
 
-    &-thumb {
+    .jw-knob {
         bottom: 0;  // Default position, overridden by player.
         left: 0;
         right: 0;
         margin: 0 auto;
-        
     }
 }
 

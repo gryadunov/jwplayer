@@ -19,7 +19,7 @@
     #namespace > .basic-skin-styles(); // Using the above local variables
     .skin-element-padding();
 
-    .jw-controlbar {
+    .jw-background-color {
         opacity: 0.8;
     }
 
@@ -81,12 +81,12 @@
     }
 
     .jw-rail,
-    .jw-timeline-buffer,
-    .jw-timeline-progress {
+    .jw-buffer,
+    .jw-progress {
         border-radius: @ui-corner-round;
     }
 
-    .jw-timeline-knob {
+    .jw-knob {
         display: none;
     }
     
@@ -111,20 +111,8 @@
         }
 
         .jw-rail,
-        .jw-timeline-progress {
+        .jw-progress {
             width: .4em;
-        }
-    }
-
-    .jw-icon-cc {
-        color: @cc-active;
-
-        &.jw-off {
-            color: @cc-inactive;   
-
-            &:before {
-                content: "\e605";
-            }        
         }
     }
 }

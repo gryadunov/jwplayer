@@ -6,9 +6,9 @@ define([
 ], function(Extendable, UI, SliderTemplate, utils) {
 
     var Slider = Extendable.extend({
-        constructor : function(type, orientation) {
+        constructor : function(className, orientation) {
+            this.className = className + ' jw-background-color jw-reset';
             this.orientation = orientation;
-            this.type = type;
 
             this.dragStartListener = this.dragStart.bind(this);
             this.dragMoveListener = this.dragMove.bind(this);
@@ -19,15 +19,15 @@ define([
         setup : function() {
             var obj = {
                 'default' : this.default,
-                type: this.type,
+                className : this.className,
                 orientation : 'jw-slider-' + this.orientation
             };
             this.el = utils.createElement(SliderTemplate(obj));
 
-            this.elementRail = this.el.getElementsByClassName('jw-' + this.type + '-container')[0];
-            this.elementBuffer = this.el.getElementsByClassName('jw-' + this.type + '-buffer')[0];
-            this.elementProgress = this.el.getElementsByClassName('jw-' + this.type + '-progress')[0];
-            this.elementThumb = this.el.getElementsByClassName('jw-' + this.type + '-knob')[0];
+            this.elementRail = this.el.getElementsByClassName('jw-slider-container')[0];
+            this.elementBuffer = this.el.getElementsByClassName('jw-buffer')[0];
+            this.elementProgress = this.el.getElementsByClassName('jw-progress')[0];
+            this.elementThumb = this.el.getElementsByClassName('jw-knob')[0];
 
             this.userInteract = new UI(this.element());
 

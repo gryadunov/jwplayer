@@ -89,36 +89,36 @@
         background-color: @rail-color;
     }
 
-    .jw-timeline-container {
+    .jw-slider-container {
         height: 1em;
     }
 
     .jw-rail,
-    .jw-timeline-buffer,
-    .jw-timeline-progress,
-    .jw-timeline-knob:after {
+    .jw-buffer,
+    .jw-progress,
+    .jw-knob:after {
         box-sizing: border-box;
         border: 1.5px solid #000;
         border-radius: 2px;
     }
 
-    .jw-timeline-progress,
-    .jw-timeline-knob {
+    .jw-progress,
+    .jw-knob {
         background: @rail-color;
     }
 
     .jw-slider-horizontal {
         .jw-rail,
-        .jw-timeline-buffer,
-        .jw-timeline-progress {
+        .jw-buffer,
+        .jw-progress {
             height: @rail-height;
         }
 
-        .jw-timeline-progress {
+        .jw-progress {
             background: @horiz-rail-gradient;
         }
 
-        .jw-timeline-knob {
+        .jw-knob {
             .vertically-centered-rail-element(.3em,.5em);
 
             &:after {
@@ -142,15 +142,15 @@
 
     .jw-slider-vertical {
         .jw-rail,
-        .jw-timeline-progress {
+        .jw-progress {
             width: @rail-height;
         }
 
-        .jw-timeline-progress {
+        .jw-progress {
             background: @vertical-rail-gradient;
         }
 
-        .jw-timeline-knob {
+        .jw-knob {
             .horizontally-centered-thumb(@rail-height,.5em);
 
             &:after {
@@ -163,14 +163,14 @@
     }
 
     .jw-icon-cc {
-        color: @cc-active;
-
-        &:before {
+        &.jw-off:before {
             content: "\e604";
         }
+    }
 
-        &.jw-off {
-            color: @cc-inactive;           
+    .jw-icon-hd {
+        &.jw-off:before {
+            content: "\e609";
         }
     }
 }

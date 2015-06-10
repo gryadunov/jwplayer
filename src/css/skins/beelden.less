@@ -37,9 +37,11 @@
     #namespace > .basic-skin-styles(); // Using the above local variables
     .skin-element-padding();
 
+    .jw-background-color {
+        background-color: @controlbar-background-color; /* Old browsers */
+    }
     .jw-controlbar {
         .inset-controlbar();
-        background-color: @controlbar-background-color; /* Old browsers */
         box-shadow: inset 0px 7px 1px -5px rgba(128,128,128,1);
         border-radius: .3em;
     }
@@ -121,27 +123,29 @@
         background-color: #282828;
     }
 
-    .jw-timeline-element {
+    .jw-rail,
+    .jw-progress,
+    .jw-buffer {
         border-radius: @ui-corner-round;
         border: 1px solid #000;
     }
 
-    .jw-timeline-rail {
+    .jw-rail {
         background-color: #353535;
     }
 
-    .jw-timeline-progress {
+    .jw-progress {
         background-color: #c93835;
     }
 
-    .jw-timeline-buffer {
+    .jw-buffer {
         background-color: #7d7d7d;
         box-shadow: inset 0 -2px 4px -1px rgba(255,255,255,0.5);
     }
 
     .jw-slider-horizontal,
     .jw-slider-vertical {
-        .jw-timeline-knob {
+        .jw-knob {
 
             &:after {
                 background-color: #bbb5b7;
@@ -153,12 +157,14 @@
     }
 
     .jw-slider-horizontal {
-        .jw-timeline-container {
+        .jw-slider-container {
             .vertically-centered-rail-element(@rail-height, 2em);
             height: .4em;
         }
 
-        .jw-timeline-element {
+        .jw-rail,
+        .jw-progress,
+        .jw-buffer {
             height: @rail-height;
         }
 
@@ -173,7 +179,7 @@
             }
         }
 
-        .jw-timeline-knob {
+        .jw-knob {
             .vertically-centered-rail-element(@rail-height, .8em);
 
             &:after {
@@ -200,7 +206,7 @@
             background: @progress-vert-gradient;
         }
 
-        .jw-thumb {
+        .jw-knob {
             .horizontally-centered-thumb(.75em, .7em);
 
             &:after {
@@ -223,16 +229,13 @@
         border-radius: @ui-padding;
     }
 
-    .jw-icon-cc {
+    .jw-toggle {
         color: @cc-active;
 
         &.jw-off {
-            color: @cc-inactive;   
-
-            &:before {
-                content: "\e605";
-            }        
+            color: @cc-inactive;
         }
     }
+
 }
 

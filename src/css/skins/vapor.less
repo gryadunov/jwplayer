@@ -79,7 +79,7 @@
         background-color: #1E1E1E;
     }
 
-	.jw-timeline-container {
+	.jw-slider-container {
 		height: @rail-height;
 	}
 
@@ -87,19 +87,19 @@
 		height: @rail-height;
 
 		.jw-rail,
-		.jw-timeline-progress,
-		.jw-timeline-buffer {
+		.jw-progress,
+		.jw-buffer {
 			height: @rail-height;
 		}
 
-		.jw-timeline-knob,
+		.jw-knob,
 		.jw-cue {
 			&:after {
 				height: 2em;
 			}
 		}
 
-		.jw-timeline-knob {
+		.jw-knob {
 			margin-left: 0;
 
 			&:after {
@@ -129,11 +129,23 @@
 		}
 
 		.jw-rail,
-		.jw-timeline-progress {
+		.jw-progress {
 			width: .5em;
 			border: 1px solid #000;
 		}
 
 	}
+
+    .jw-icon-cc {
+        &.jw-off:before {
+            content: "\e604";
+        }
+    }
+
+    .jw-icon-hd {
+        &.jw-off:before {
+            content: "\e609";
+        }
+    }
 
 }
